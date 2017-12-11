@@ -11,10 +11,10 @@ namespace pdal
 {
 
     static PluginInfo const s_info =
-            PluginInfo("filters.name", "My awesome filter",
+            PluginInfo("filters.myfilter", "My awesome filter",
                        "http://link/to/documentation");
 
-    CREATE_STATIC_PLUGIN(1, 0, MyFilter, Filter, s_info)
+    CREATE_SHARED_PLUGIN(1, 0, MyFilter, Filter, s_info)
 
     std::string MyFilter::getName() const
     {

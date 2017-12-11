@@ -1,15 +1,10 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.0)
 project(example_pdal_plugin)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-set(PDAL_FIND_VERSION 1.6)
-find_package(PDAL ${PDAL_FIND_VERSION} REQUIRED CONFIG NO_POLICY_SCOPE)
+find_package(PDAL 1.6.0 REQUIRED CONFIG)
 
-mark_as_advanced(CLEAR PDAL_INCLUDE_DIRS)
-mark_as_advanced(CLEAR PDAL_LIBRARIES)
-include_directories(${PDAL_INCLUDE_DIRS})
-include_directories(${LAZPERF_INCLUDE_DIR})
-
-
-add_library(example_pdal_plugin SHARED library.cpp library.h)
+add_library(pdal_plugin_filter_myfilter SHARED library.cpp)
+target_link_libraries(pdal_plugin_filter_myfilter PRIVATE ${PDAL_LIBRARIES})
+target_include_directories(pdal_plugin_filter_myfilter PRIVATE ${PDAL_INCLUDE_DIRS})

@@ -1,8 +1,6 @@
 #ifndef EXAMPLE_PDAL_PLUGIN_LIBRARY_H
 #define EXAMPLE_PDAL_PLUGIN_LIBRARY_H
 
-// MyFilter.hpp
-
 #pragma once
 
 #include <pdal/Filter.hpp>

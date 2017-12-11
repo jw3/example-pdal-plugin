@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+rm -rf build
+mkdir build
+cd build
+cmake ..
+make
+
+PDAL_DRIVER_PATH=$PWD pdal --drivers
