@@ -2,7 +2,7 @@
 // Created by wassj on 12/12/17.
 //
 
-#include "Writer.h"
+#include "MyWriter.h"
 #include <pdal/pdal_macros.hpp>
 #include <pdal/util/FileUtils.hpp>
 #include <pdal/util/ProgramArgs.hpp>
