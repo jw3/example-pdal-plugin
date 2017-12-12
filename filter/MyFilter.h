@@ -1,6 +1,3 @@
-#ifndef EXAMPLE_PDAL_PLUGIN_LIBRARY_H
-#define EXAMPLE_PDAL_PLUGIN_LIBRARY_H
-
 #pragma once
 
 #include <pdal/Filter.hpp>
@@ -37,6 +34,4 @@ namespace pdal
         MyFilter(const MyFilter&); // not implemented
     };
 
-} // namespace pdal
-
-#endif
+}

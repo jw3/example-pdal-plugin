@@ -1,7 +1,3 @@
-//
-// Created by wassj on 12/12/17.
-//
-
 #include "MyWriter.h"
 #include <pdal/pdal_macros.hpp>
 #include <pdal/util/FileUtils.hpp>

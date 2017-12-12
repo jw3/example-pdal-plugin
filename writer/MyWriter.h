@@ -1,13 +1,3 @@
-//
-// Created by wassj on 12/12/17.
-//
-
-#ifndef EXAMPLE_PDAL_PLUGIN_WRITER_H
-#define EXAMPLE_PDAL_PLUGIN_WRITER_H
-
-
-// MyWriter.hpp
-
 #pragma once
 
 #include <pdal/Writer.hpp>
@@ -44,7 +34,4 @@ namespace pdal{
         Dimension::Id m_dataDim;
     };
 
-} // namespace pdal
-
-
-#endif //EXAMPLE_PDAL_PLUGIN_WRITER_H
+}

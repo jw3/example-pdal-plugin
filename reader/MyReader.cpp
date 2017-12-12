@@ -1,7 +1,3 @@
-//
-// Created by wassj on 12/12/17.
-//
-
 #include "MyReader.h"
 #include <pdal/pdal_macros.hpp>
 #include <pdal/util/ProgramArgs.hpp>
@@ -113,4 +109,4 @@ namespace pdal
         m_stream.reset();
     }
 
-} //namespace pdal
+}

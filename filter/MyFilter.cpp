@@ -40,4 +40,4 @@ namespace pdal
         return viewSet;
     }
 
-} // namespace pdal
+}

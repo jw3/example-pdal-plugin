@@ -1,13 +1,3 @@
-//
-// Created by wassj on 12/12/17.
-//
-
-#ifndef EXAMPLE_PDAL_PLUGIN_READER_H
-#define EXAMPLE_PDAL_PLUGIN_READER_H
-
-
-// MyReader.hpp
-
 #pragma once
 
 #include <pdal/PointView.hpp>
@@ -37,6 +27,3 @@ namespace pdal
         virtual void done(PointTableRef table);
     };
 }
-
-
-#endif //EXAMPLE_PDAL_PLUGIN_READER_H
