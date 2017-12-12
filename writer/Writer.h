@@ -1,0 +1,50 @@
+//
+// Created by wassj on 12/12/17.
+//
+
+#ifndef EXAMPLE_PDAL_PLUGIN_WRITER_H
+#define EXAMPLE_PDAL_PLUGIN_WRITER_H
+
+
+// MyWriter.hpp
+
+#pragma once
+
+#include <pdal/Writer.hpp>
+
+#include <string>
+
+namespace pdal{
+
+    typedef std::shared_ptr<std::ostream> FileStreamPtr;
+
+    class MyWriter : public Writer
+    {
+    public:
+        MyWriter()
+        {}
+
+        static void  * create();
+        static int32_t destroy(void *);
+        std::string getName() const;
+
+    private:
+        virtual void addArgs(ProgramArgs& args);
+        virtual void initialize();
+        virtual void ready(PointTableRef table);
+        virtual void write(const PointViewPtr view);
+        virtual void done(PointTableRef table);
+
+        std::string m_filename;
+        std::string m_newline;
+        std::string m_datafield;
+        int m_precision;
+
+        FileStreamPtr m_stream;
+        Dimension::Id m_dataDim;
+    };
+
+} // namespace pdal
+
+
+#endif //EXAMPLE_PDAL_PLUGIN_WRITER_H
